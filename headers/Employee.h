@@ -13,21 +13,24 @@ class Employee {
         std::string m_name;
         Employment m_employment; 
         Level m_level;
-        double m_salary;
+        Status m_status;
         double m_rate;
-        // double m_perfomance; //0% - 100
     public:
-        // Employee();
-        Employee(const std::string& name, const Employment& employment,const Level& level);
-        virtual ~Employee();
+        Employee(const std::string& name, const Employment& employment,const Level& level, const Status& status);
+        virtual ~Employee() = default;
         Employee& operator++ ();
-        // Employee(const Employee& other);
 
-        virtual void calculateSalary() = 0;
+        virtual double calculateSalary() const = 0;
         virtual void promote();
-        virtual void perfomanceReview() = 0;
-        // void updateRole();
-        void display() const;
+        virtual void display() const;
+        
+
+        std::string getName() const {return m_name;}
+        Level getLevel() const {return m_level;}
+        double getRate() const {return m_rate;}
+        Employment getEmployment() const {return m_employment;}
+        int getEmployeeId() const {return m_employeeId;}
+
 };
 
 
