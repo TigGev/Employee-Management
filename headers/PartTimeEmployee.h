@@ -9,8 +9,6 @@ class PartTimeEmployee : public Employee {
     public:
         PartTimeEmployee(const std::string& name, const Level& level, const Status& status);
 
-        // void promote() override;
-        // void display() const override;
         double calculateSalary() const override;
 
         void setHourlyWage(double hourlyWage);

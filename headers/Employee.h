@@ -1,10 +1,9 @@
 #ifndef EMPLOYEE_H
 #define EMPLOYEE_H
+#include "EmployeeStatus.h"
 #include <iostream>
 
-enum class Employment  {Part_time, Full_time};
-enum class Status {Active, On_leave, Inactive, Retired};
-enum class Level {Intern, Junior, Middle, Senior};
+
 
 class Employee {
     protected:
@@ -18,7 +17,7 @@ class Employee {
     public:
         Employee(const std::string& name, const Employment& employment,const Level& level, const Status& status);
         virtual ~Employee() = default;
-        Employee& operator++ ();
+        // Employee& operator++ ();
 
         virtual double calculateSalary() const = 0;
         virtual void promote();
@@ -30,6 +29,7 @@ class Employee {
         double getRate() const {return m_rate;}
         Employment getEmployment() const {return m_employment;}
         int getEmployeeId() const {return m_employeeId;}
+        Status getStatus() const {return m_status;}
 
 };
 
