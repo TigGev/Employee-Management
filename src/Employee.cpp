@@ -32,7 +32,7 @@ void Employee::promote() {
 }
 
 void Employee::display() const {
-    std::cout << "ID: " << m_employeeId << ", " << "Name: " << m_name << ", " << " (rate: "  << m_rate << "), Role: ";
+    std::cout << "ID: " << m_employeeId << ", " << "Name: " << m_name << ", " << "Salary: " << calculateSalary() << " (rate: "  << m_rate << "), Role: ";
     switch (m_level) {
         case Level::Intern : std::cout << "Intern, "; break;
         case Level::Junior : std::cout << "Junior, "; break;

@@ -1,12 +1,12 @@
 #include "../headers/FullTimeEmployee.h"
 
-FullTimeEmployee::FullTimeEmployee(const std::string& name, const Level& level, std::set<Benefit> benefits = std::set<Benefit>{})
-            : Employee(name, Employment::Full_time, level) {
-                m_benefits = std::move(benefits);
-            }
+FullTimeEmployee::FullTimeEmployee(const std::string& name, const Level& level, const Status& status, std::set<Benefit> benefits = std::set<Benefit>{})
+    : Employee(name, Employment::Full_time, level, status) {
+        m_benefits = std::move(benefits);
+}
 
 double FullTimeEmployee::calculateSalary() const {
-    return m_salary * m_rate;
+    return m_baseSalary * m_rate;
 }
 
 

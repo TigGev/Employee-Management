@@ -7,10 +7,10 @@ class PartTimeEmployee : public Employee {
         float m_hoursWorked = 0;
 
     public:
-        PartTimeEmployee(const std::string& name, const Level& level);
+        PartTimeEmployee(const std::string& name, const Level& level, const Status& status);
 
-        void promote() override;
-        void display() const override;
+        // void promote() override;
+        // void display() const override;
         double calculateSalary() const override;
 
         void setHourlyWage(double hourlyWage);
