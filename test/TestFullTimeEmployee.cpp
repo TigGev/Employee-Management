@@ -23,7 +23,7 @@ TEST(FullTimeEmployeeTest, ReturnsNoBenefitsWhenNullopt) {
     EXPECT_TRUE(benefits.empty());
 }
 
-TEST(FullTimeEmployeeTest, FullTimeEmployeeCalulayeSalaryTest) {
+TEST(FullTimeEmployeeTest, FullTimeEmployeeCalulateSalaryTest) {
     FullTimeEmployee femp("Bob", Level::Senior, {Benefit::Gym});
     EXPECT_EQ(femp.c)
 }

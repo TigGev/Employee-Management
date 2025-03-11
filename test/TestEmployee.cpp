@@ -9,11 +9,6 @@ TEST(EmployeeTest, ConstructorInitialization) {
     EXPECT_DOUBLE_EQ(emp.getRate(), 1.2);
 }
 
-// TEST(EmployeeTest, PromotionOperator) {
-//     Employee emp("Bob", Employment::Full_time, Level::Intern, Status::Active);
-//     ++emp;
-//     EXPECT_EQ(emp.getLevel(), Level::Junior);
-// }
 
 TEST(EmployeeTest, PromoteMethod) {
     Employee emp ("Charlie", Employement::Part_time, Level::Junior, Status::Active);
