@@ -10,7 +10,7 @@ class FullTimeEmployee : public Employee {
         double m_baseSalary;
         std::set<Benefit> m_benefits;
     public:
-        FullTimeEmployee(const std::string& name, const Level& level, const Status& status, std::set<Benefit> benefits = std::set<Benefit>{});
+        FullTimeEmployee(const std::string& name, const Level& level, const Status& status, double baseSalary, std::set<Benefit> benefits = std::set<Benefit>{});
 
         void display() const override;
         double calculateSalary() const override;

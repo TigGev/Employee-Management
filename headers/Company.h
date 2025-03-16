@@ -12,8 +12,8 @@ class Company {
         
     public:
         Company(std::string name, std::string orientation, std::string director);
-
-        std::string getName() const {return m_companyName;}
+        ~Company();
+        std::string getName() const {return m_director;}
         std::string getOrientation() const {return m_orientation;}
         std::string getDirectorName() const {return m_companyName;}
 

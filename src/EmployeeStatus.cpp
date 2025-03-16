@@ -10,14 +10,14 @@ Level& operator++(Level& level) {
     return level;
 }
 
-
-std::ostream& operator<< (std::ostream& output, Level& level) {
+std::ostream& operator<< (std::ostream& output, Level level) {
     switch (level) {
         case Level::Intern : output << "Intern"; break;
         case Level::Junior : output << "Junior"; break;
         case Level::Middle : output << "Middle"; break;
         case Level::Senior : output << "Senior"; break;
     }
+    return output;
 }
 
 std::ostream& operator<< (std::ostream& output, Employment& employment) {
@@ -25,6 +25,7 @@ std::ostream& operator<< (std::ostream& output, Employment& employment) {
         case Employment::Full_time: output << "Full-Time, "; break;
         case Employment::Part_time: output << "Part-Time, "; break;
     }
+    return output;
 }
 
 std::ostream& operator<< (std::ostream& output, Status& status) {
@@ -34,6 +35,7 @@ std::ostream& operator<< (std::ostream& output, Status& status) {
         case Status::Inactive: output << "Inactive"; break;
         case Status::Retired: output << "Retired"; break;
     }
+    return output;
 }
 
 double getRateForLevel(Level& level) {

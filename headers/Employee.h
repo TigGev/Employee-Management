@@ -17,7 +17,6 @@ class Employee {
     public:
         Employee(const std::string& name, const Employment& employment,const Level& level, const Status& status);
         virtual ~Employee() = default;
-        // Employee& operator++ ();
 
         virtual double calculateSalary() const = 0;
         virtual void promote();

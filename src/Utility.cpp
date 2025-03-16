@@ -45,3 +45,49 @@ bool validateInputOption(int input) {
     std::cin.clear();
     return false;
 }
+
+bool validateInputHourlyWage(double hourlyWage) {
+    const double MIN_WAGE = 5.00;
+    const double MAX_WAGE = 500.00;
+
+    if (std::cin.fail()) {
+            std::cin.clear(); 
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            std::cout << "Invalid input! Please enter a numeric value: ";
+            return false;
+        }
+
+        if (hourlyWage < MIN_WAGE || hourlyWage > MAX_WAGE) {
+            std::cout << "Error: Wage must be between $" << MIN_WAGE << " and $" << MAX_WAGE << ". Try again: ";
+            return false;
+        }
+        return true;
+}
+
+float getValidHoursWorked() {
+    float hours;
+    const float MIN_HOURS = 0.5;  
+    const float MAX_HOURS = 100.0;
+
+    std::cout << "Enter hours worked: ";
+    
+    while (true) {
+        std::cin >> hours;
+
+        if (std::cin.fail()) {
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            std::cout << "Invalid input! Please enter a numeric value: ";
+            continue;
+        }
+
+        if (hours < MIN_HOURS || hours > MAX_HOURS) {
+            std::cout << "Error: Hours must be between " << MIN_HOURS << " and " << MAX_HOURS << ". Try again: ";
+            continue;
+        }
+        break;
+    }
+
+        return hours;
+
+}

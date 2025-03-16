@@ -20,8 +20,7 @@ void Employee::promote() {
 void Employee::display() const {
     std::cout << "ID: " << m_employeeId << ", " << "Name: " 
     << m_name << ", " << "Salary: " << calculateSalary() 
-    << " (rate: "  << m_rate << "), Level: " << m_level
+    << " (rate: "  << m_rate << "), Level: " << m_level 
     << ", Employment Type: " << m_employment
     << ", Status: " << m_status;
-
 }

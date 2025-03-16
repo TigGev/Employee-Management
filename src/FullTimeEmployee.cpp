@@ -1,6 +1,6 @@
 #include "../headers/FullTimeEmployee.h"
 
-FullTimeEmployee::FullTimeEmployee(const std::string& name, const Level& level, const Status& status, std::set<Benefit> benefits = std::set<Benefit>{})
+FullTimeEmployee::FullTimeEmployee(const std::string& name, const Level& level, const Status& status, double baseSalary, std::set<Benefit> benefits = std::set<Benefit>{})
     : Employee(name, Employment::Full_time, level, status) {
         m_benefits = std::move(benefits);
 }
